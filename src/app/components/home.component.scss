@@ -1,0 +1,9 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+@include mat.all-component-themes(mat.define-light-theme((
+  color: mat.define-palette(mat.$indigo-palette),
+  typography: mat.define-typography-config(),
+  density: 0,
+  is-m3: true
+)));
