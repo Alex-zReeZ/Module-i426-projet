@@ -1,9 +1,100 @@
 @use '@angular/material' as mat;
 
 @include mat.core();
-@include mat.all-component-themes(mat.define-light-theme((
-  color: mat.define-palette(mat.$indigo-palette),
-  typography: mat.define-typography-config(),
-  density: 0,
-  is-m3: true
-)));
+
+//.home-component {
+//  background: url('../../../public/171bdd3f43766e512935f608c0103bdf56be1ccd.jpg');
+//  box-sizing: border-box;
+//  background-size: cover;
+//  left: 0px;
+//  top: -200px;
+//  border: 2px solid #000000;
+//  opacity: 0.5;
+//}
+
+.home-component {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+}
+
+.description {
+  position: relative;
+  width: 623px;
+  left: 460px;
+  top: 175px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 45px;
+
+  letter-spacing: 0.5px;
+
+  color: #FFFFFF;
+}
+
+.hikes-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+
+  position: absolute;
+  width: 200px;
+  height: 75px;
+  left: 460px;
+  top: 500px;
+
+  background: #B79D65;
+  border-radius: 100px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+
+  text-align: center;
+  letter-spacing: 0.1px;
+
+  color: #FFFFFF;
+}
+
+.about-us-title {
+  position: absolute;
+  height: 45px;
+  left: 460px;
+  top: 575px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 45px;
+
+  letter-spacing: 0.5px;
+
+  color: #FFFFFF;
+}
+
+.about-us-description {
+  position: absolute;
+  width: 1194px;
+  left: 460px;
+  top: 650px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+
+  letter-spacing: 0.5px;
+
+  color: #FFFFFF;
+}
