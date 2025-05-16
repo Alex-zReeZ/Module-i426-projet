@@ -169,7 +169,7 @@ nav h1 {
     margin: 0 16px;
 }
 
-@media (min-width: 496px) {
+@media (max-width: 497px) {
     section.filters {
         display: flex;
         justify-content: space-between;
