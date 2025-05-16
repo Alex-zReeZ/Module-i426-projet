@@ -1,0 +1,52 @@
+{
+    "walk": {
+        "4b4e1054-308f-4213-acab-bf58f6d98df2": {
+            "title": "title 1",
+            "imagePath": "publicPath",
+            "description": "example 1",
+            "duration": 120,
+            "difficulty": "easy",
+            "location": ""
+        },
+        "9acf96ca-65ae-47fc-a0e6-7e4ae235fdae": {
+            "title": "title 2",
+            "imagePath": "publicPath",
+            "description": "example 2",
+            "duration": 160,
+            "difficulty": "medium",
+            "location": ""
+        },
+        "6006efdf-5c78-498c-9de6-f890b6f7d8d2": {
+            "title": "title 3",
+            "imagePath": "publicPath",
+            "description": "example 3",
+            "duration": 40,
+            "difficulty": "easy",
+            "location": ""
+        },
+        "0abcd679-7059-4c9f-9f5b-f9e60062f0c6": {
+            "title": "title 4",
+            "imagePath": "publicPath",
+            "description": "example 4",
+            "duration": 30,
+            "difficulty": "hard",
+            "location": ""
+        },
+        "f14eb7c5-1cad-45b3-8732-42304977eb04": {
+            "title": "title 5",
+            "imagePath": "publicPath",
+            "description": "example 5",
+            "duration": 220,
+            "difficulty": "medium",
+            "location": ""
+        },
+        "203069ba-be5f-4688-87c8-0c42ef74e7f9": {
+            "title": "title 6",
+            "imagePath": "publicPath",
+            "description": "example 6",
+            "duration": 240,
+            "difficulty": "easy",
+            "location": ""
+        }
+    }
+}
