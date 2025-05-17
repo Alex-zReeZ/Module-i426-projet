@@ -1,5 +1,5 @@
 // === Variables de couleurs ===
-$bg-color: #f5f1e3;
+$bg-color: #F5F1E3;
 $button-bg: #c5a87f;
 $dot-color: #c5a87f;
 $text-color: #000;
@@ -176,9 +176,9 @@ html, body {
 }
 
 @media (max-width: 768px) {
-  .container {
-    padding: 1rem;
-
+  body {
+    background-color: $bg-color;
+  
     .header {
       position: static;
       display: flex;
