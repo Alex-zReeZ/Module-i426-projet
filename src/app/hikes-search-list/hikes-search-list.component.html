@@ -1,32 +1,10 @@
 <div class="page-background-color">
-    <nav class="navbar">
-        <div class="back-button">
-            <svg width="44" height="44" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <mask id="mask0_100_1598" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="64"
-                    height="64">
-                    <rect width="64" height="64" fill="#D9D9D9" />
-                </mask>
-                <g mask="url(#mask0_100_1598)">
-                    <path
-                        d="M26.6667 48L10.6667 32L26.6667 16L30.4001 19.8667L20.9334 29.3333H53.3334V34.6667H20.9334L30.4001 44.1333L26.6667 48Z"
-                        fill="#1C1B1F" />
-                </g>
-            </svg>
-            <a href="#">Retour</a>
-        </div>
-        <div class="">
-            <h1>Nos Balades</h1>
-        </div>
-        <div>
-            <svg width="48" height="39" viewBox="0 0 48 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M6 28.6347L6 25.4749H42V28.6347H6ZM6 20.7351V17.5753H42V20.7351H6ZM6 12.8356V9.67578H42V12.8356H6Z"
-                    fill="#B79D65" />
-            </svg>
 
-        </div>
-    </nav>
-    <app-navbar></app-navbar>
+    <app-page-title
+    [title]="'Nos Balades'"
+    [showBackButton]="true"
+    [titleColor]="'black'"
+    ></app-page-title>
 
     <section class="filters">
         <div class="dropdown">
