@@ -1,1 +1,43 @@
-<h1 class="title">{{ title }}</h1>
+<nav class="navbar">
+    <div class="navbar-section">
+        <div class="back-button" *ngIf="showBackButton">
+            <button class="back-button" (click)="goBack()">
+                <svg width="44" height="44" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_100_1598" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="64"
+                        height="64">
+                        <rect width="64" height="64" fill="#000" />
+                    </mask>
+                    <g mask="url(#mask0_100_1598)">
+                        <path
+                            d="M26.6667 48L10.6667 32L26.6667 16L30.4001 19.8667L20.9334 29.3333H53.3334V34.6667H20.9334L30.4001 44.1333L26.6667 48Z"
+                            fill="#000" />
+                    </g>
+                </svg>
+                Retour
+            </button>
+        </div>
+    </div>
+
+    <div class="navbar-center">
+        <h1 class="title" [ngClass]="titleColor">{{ title }}</h1>
+    </div>
+
+    <div class="navbar-section" style="justify-content: flex-end;">
+    <div class="burger-menu">
+        <button
+        class="burger-icon"
+        [class.open]="menuOpen"
+        (click)="toggleMenu()"
+        aria-label="Menu"
+        >
+        <span></span>
+        <span></span>
+        <span></span>
+        </button>
+
+        <ul class="dropdown-menu" [class.open]="menuOpen">
+        <li><a href="/hikes-search-list">Nos locations</a></li>
+        </ul>
+    </div>
+    </div>
+</nav>

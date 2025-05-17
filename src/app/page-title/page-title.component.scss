@@ -1,17 +1,117 @@
-.title {
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  background-color: transparent;
   position: relative;
-  top: 100px;
+  height: 80px;
+}
 
-  text-align: center;
+.navbar-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
 
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 64px;
-  line-height: 45px;
+.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  text-align: center;
-  letter-spacing: 0.5px;
+.title {
+  font-size: 64px !important;
+  font-weight: 400;
+}
 
-  color: #FFFFFF;
+.white.title {
+  color: white;
+}
+
+.black.title {
+  color: #000;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.burger-menu {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+
+.burger-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 32px;  
+}
+
+/*---------------dropdwon menu------------------*/
+.burger-menu {
+  position: relative;
+}
+
+.burger-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px;
+}
+
+.burger-icon span {
+  display: block;
+  width: 30px;
+  height: 4px;
+  background-color: #B79D65;
+  transition: 0.3s ease;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #B79D65;
+  border: none;
+  list-style: none;
+  padding: 10px;
+  z-index: 1000;
+  border-radius: 4px;
+  min-width: 180px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.dropdown-menu li a {
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-menu.open {
+  display: block;
 }
