@@ -169,25 +169,82 @@ nav h1 {
 }
 
 @media (max-width: 497px) {
-    section.filters {
-        display: flex;
-        justify-content: space-between;
-        margin: 0 auto;
-    }
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 10px;
+  }
 
-    .hikes-list {
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
-      }
+  .dropdown {
+    width: 100%;
+  }
 
-    .hike-card {
-        width: 90%;
-    }
+  .dropdown-toggle {
+    width: 100%;
+    text-align: left;
+  }
 
-    .hike-item {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
+  .dropdown-menu {
+    width: 100%;
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+    margin: 1rem 0 0.5rem 1rem;
+  }
+
+  .hikes-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
+    gap: 1.5rem;
+  }
+
+  .hike-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hike-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem;
+    gap: 10px;
+  }
+
+  .hikes-name {
+    font-size: 1rem;
+    padding-left: 0.5rem;
+  }
+
+  .hike-image {
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .hike-details {
+    padding: 0.5rem;
+  }
+
+  .hike-info {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .hike-button-container {
+    justify-content: center;
+    margin: 0;
+  }
+
+  .hike-button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
 }
+
