@@ -1,41 +1,29 @@
-<div class="container">
+<div class="container" *ngIf="hike">
     <div class="page-background-color">
-
         <app-page-title
             [title]="' '"
             [showBackButton]="true"
             [titleColor]="'black'"
         ></app-page-title>
-
-
         <div class="content">
-            <img src="assets/pictures/lausanne.png" class="image-lausanne" alt="Lausanne">
+            <img [src]="hike.imagePath" class="image-lausanne" [alt]="hike.title">
             <div class="right-column">
                 <div class="text-content">
-                    <h1>Lausanne</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                        sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-
+                    <h1>{{ hike.title }}</h1>
+                    <p>{{ hike.description }}</p>
                     <div class="info-map-container">
                         <div class="info">
-                            <h2>Informations :</h2>
-                            <div class="info-item"><span class="dot"></span> 45 Min</div>
-                            <div class="info-item"><span class="dot"></span> Vaud</div>
-                            <div class="info-item"><span class="dot"></span> Normal</div>
+                            <h2>Informations</h2>
+                            <div class="info-item"><span class="dot"></span> {{ hike.duration }} Min</div>
+                            <div class="info-item"><span class="dot"></span> {{ hike.location }}</div>
+                            <div class="info-item"><span class="dot"></span> {{ hike.difficulty }}</div>
                         </div>
-
                         <div class="map-section">
-                            <img src="assets/pictures/map.png" class="map-image" alt="Carte"/>
-                            <p>Voir l’itinéraire</p>
+                            <iframe [src]="safeMapUrl" class="map-image" title="Carte"></iframe>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>

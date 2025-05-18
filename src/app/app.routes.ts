@@ -6,9 +6,9 @@ import { ErrorPageComponent } from './error-pages/error-pages.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
-    { path: 'hikes-details', component: HikesDetailsComponent},
-    { path: 'hikes-search-list', component: HikesSearchListComponent},
-    { path: 'error', component: ErrorPageComponent},
+    { path: 'hikes-details/:id', component: HikesDetailsComponent },
+    { path: 'hikes-search-list', component: HikesSearchListComponent },
+    { path: 'error', component: ErrorPageComponent },
     { path: '**', redirectTo: 'error' }
 ];
 
