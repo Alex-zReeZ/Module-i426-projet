@@ -1,10 +1,6 @@
 <div class="page-background-color">
 
-    <app-page-title
-    [title]="'Nos Balades'"
-    [showBackButton]="true"
-    [titleColor]="'black'"
-    ></app-page-title>
+    <app-page-title [title]="'Nos Balades'" [showBackButton]="true" [titleColor]="'black'"></app-page-title>
 
     <section class="filters">
         <div class="dropdown">
@@ -64,56 +60,20 @@
         <div>
             <h2 class="page-title">Liste des balades</h2>
             <ul class="hikes-list">
-                <li class="hike-item">
+                <li class="hike-item" *ngFor="let hike of hikes">
                     <div class="hike-card">
-                        <h3 class="hikes-name">Nom de la balade</h3>
-                        <img src="https://picsum.photos/430/188" alt="placeholder" class="hike-image" />
+                        <h3 class="hikes-name">{{ hike.title }}</h3>
+                        <img [src]="hike.imagePath" alt="Image de la balade" class="hike-image" />
                         <div class="hike-details">
-                            <p>Description : Balade agréable à travers la forêt et les champs.</p>
+                            <p>Description : {{ hike.description }}</p>
                             <div class="hike-info">
-                                <p>Durée : 45 minutes</p>
-                                <p>Difficulté : Facile</p>
+                                <p>Durée : {{ hike.duration }} minutes</p>
+                                <p>Difficulté : {{ hike.difficulty }}</p>
                             </div>
                         </div>
                         <div class="hike-button-container">
                             <button class="hike-button">
-                                <a href="#">Ouvrir</a>
-                            </button>
-                        </div>
-                    </div>
-                </li>
-                <li class="hike-item">
-                    <div class="hike-card">
-                        <h3 class="hikes-name">Nom de la balade</h3>
-                        <img src="https://picsum.photos/430/188" alt="placeholder" class="hike-image" />
-                        <div class="hike-details">
-                            <p>Description : Balade agréable à travers la forêt et les champs.</p>
-                            <div class="hike-info">
-                                <p>Durée : 45 minutes</p>
-                                <p>Difficulté : Facile</p>
-                            </div>
-                        </div>
-                        <div class="hike-button-container">
-                            <button class="hike-button">
-                                <a href="#">Ouvrir</a>
-                            </button>
-                        </div>
-                    </div>
-                </li>
-                <li class="hike-item">
-                    <div class="hike-card">
-                        <h3 class="hikes-name">Nom de la balade</h3>
-                        <img src="https://picsum.photos/430/188" alt="placeholder" class="hike-image" />
-                        <div class="hike-details">
-                            <p>Description : Balade agréable à travers la forêt et les champs.</p>
-                            <div class="hike-info">
-                                <p>Durée : 45 minutes</p>
-                                <p>Difficulté : Facile</p>
-                            </div>
-                        </div>
-                        <div class="hike-button-container">
-                            <button class="hike-button">
-                                <a href="#">Ouvrir</a>
+                                <a [routerLink]="['/hikes-detail', hike.id]">Ouvrir</a>
                             </button>
                         </div>
                     </div>
