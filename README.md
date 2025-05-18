@@ -1,59 +1,168 @@
-# Groupe4ModuleI322
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3.
+# Installation et exécution du client Angular
 
-## Development server
+Ce guide vous accompagne pas à pas pour installer, configurer et lancer notre client Angular, y compris la mise en place du **jeu de données de test** via JSON Server.
 
-To start a local development server, run:
+## Objectif
+
+Configurer un environnement local prêt à l'emploi pour :
+- Compiler et servir le client Angular en mode production.
+- Utiliser un backend mocké grâce à JSON Server.
+
+### 1. Installer Node.js (et npm)
+
+Téléchargez et installez Node.js (version recommandée : **20.x**) depuis :  
+👉 https://nodejs.org/
+
+Cela installera également `npm` (Node Package Manager).
+
+Vérifiez l’installation :
+
+```bash
+node -v
+npm -v
+```
+### 2. Installer Angular CLI
+
+```bash
+npm install -g @angular/cli
+```
+
+Vérifiez l’installation :
+
+```bash
+ng version
+```
+## Installation du projet
+
+### 1. Cloner le repo
+
+```bash
+git clone https://github.com/Alex-zReeZ/Module-i426-projet.git
+cd Module-i426-projet
+```
+
+### 2. Installer les dépendances du projet
+
+```bash
+npm install
+```
+
+Cela installe toutes les dépendances requises pour pouvoir faire tourner le site correctement
+
+## Lancer le jeu de données de test (JSON Server)
+
+Nous utilisons `JSON Server` pour simuler un backend avec des données de test.
+
+### 1. Démarrer le serveur mock
+
+Assurez-vous d’avoir un fichier `db.json` à la racine.
+
+```bash
+npx json-server db.json
+```
+
+Cela expose l’API simulée à :  
+http://localhost:3000/walk
+
+## Lancer le projet angular en mode production
+Si vous avez déjà lancé le serveur, veuillez ouvrir un nouveau terminal sans fermer le précédent, afin de pouvoir faire tourner le serveur et l'application en même temps
+
+### 1. Servir l'application
 
 ```bash
 ng serve
 ```
+Le client sera accessible via cet URL :
+http://localhost:4200/
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Tester l’application
 
-## Code scaffolding
+1. Assurez-vous que **JSON Server** tourne à l’adresse [http://localhost:3000](http://localhost:3000).
+2. Servez l’application Angular avec `ng serve`.
+3. Accédez à l’application via [http://localhost:4200](http://localhost:4200).
+4. L’application devrait interagir avec les données du fichier `db.json`.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Structure du projet
 
-```bash
-ng generate component component-name
+```
+Module-i426-projet
+    │   .editorconfig
+    │   .gitignore
+    │   angular.json
+    │   db.json
+    │   package-lock.json
+    │   package.json
+    │   README.md
+    │   tsconfig.app.json
+    │   tsconfig.json
+    │   tsconfig.spec.json
+    │
+    ├───.angular
+    │   └───cache
+    │       └───19.2.4
+    │           └───groupe4-module-i322
+    │               │   .tsbuildinfo
+    │               │
+    │               └───vite
+    │                   ├───deps
+    │                           ...
+    │                   └───deps_ssr
+    |						    ...
+    │
+    ├───.vscode
+    │       ...
+    │
+    ├───public
+    │       favicon.ico
+    │       Icon.svg
+    │
+    └───src
+        │   index.html
+        │   main.server.ts
+        │   main.ts
+        │   server.ts
+        │   styles.scss
+        │
+        ├───app
+        │   │   app.component.html
+        │   │   ...
+        │   │
+        │   ├───error-pages
+        │   │       error-pages.component.html
+        │   │       ...
+        │   │
+        │   ├───hikes-details
+        │   │       hikes-details.component.html
+        │   │       ...
+        │   │
+        │   ├───hikes-search-list
+        │   │       hikes-search-list.component.html
+        │   │       ...
+        │   │
+        │   ├───home-page
+        │   │       home.component.html
+        │   │       ...
+        │   │
+        │   └───page-title
+        │           page-title.component.html
+        │           ...
+        │
+        └───assets
+            └───pictures
+                    areuse.jpeg
+                    ...
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Remarques
 
-```bash
-ng generate --help
-```
+- L’API simulée (JSON Server) doit tourner **avant** de charger l'application.
+- Pour pouvoir tourner le serveur et les pages angular, il faut avoir 2 terminaux ouverts.
 
-## Building
+## Auteurs
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Projet développé par :
+- Alex Beck
+- Esteban Soler
+- Henrique Pinto Rocha
+- Timothee Delacrétaz
