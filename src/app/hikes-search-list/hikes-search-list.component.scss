@@ -95,8 +95,10 @@ nav h1 {
   
 
   .hikes-list {
-    display: flex;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    column-gap: 20px;
+    row-gap: 40px;
     padding: 20px;
     list-style: none;
 }
