@@ -2,7 +2,7 @@
     "walk": {
         "1": {
             "title": "Tour du Lac de Derborence",
-            "imagePath": "/public/pictures/derborence.jpg",
+            "imagePath": "assets/pictures/derborence.jpg",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "duration": 120,
             "difficulty": "facile",
@@ -10,7 +10,7 @@
         },
         "2": {
             "title": "Crêt du Van",
-            "imagePath": "/public/pictures/cret-du-van.jpg",
+            "imagePath": "assets/pictures/cret-du-van.jpg",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "duration": 180,
             "difficulty": "moyen",
@@ -18,7 +18,7 @@
         },
         "3": {
             "title": "Sentier du Lac Bleu d’Arolla",
-            "imagePath": "/public/pictures/lac-bleu-arolla.jpg",
+            "imagePath": "assets/pictures/lac-bleu-arolla.jpg",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "duration": 90,
             "difficulty": "facile",
@@ -26,7 +26,7 @@
         },
         "4": {
             "title": "Ascension du Faulhorn",
-            "imagePath": "/public/pictures/faulhorn.jpg",
+            "imagePath": "assets/pictures/faulhorn.jpg",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "duration": 150,
             "difficulty": "difficile",
@@ -34,7 +34,7 @@
         },
         "5": {
             "title": "Gorges de l’Areuse",
-            "imagePath": "/public/pictures/areuse.jpg",
+            "imagePath": "assets/pictures/areuse.jpg",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "duration": 75,
             "difficulty": "facile",
@@ -42,7 +42,7 @@
         },
         "6": {
             "title": "Haute Route Verbier - Zermatt",
-            "imagePath": "/public/pictures/haute-route.jpg",
+            "imagePath": "assets/pictures/haute-route.jpg",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "duration": 300,
             "difficulty": "difficile",
