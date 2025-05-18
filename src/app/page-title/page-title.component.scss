@@ -115,3 +115,25 @@
 .dropdown-menu.open {
   display: block;
 }
+
+@media (max-width: 768px) {
+  .navbar-section {
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  .navbar-center {
+    left: 0;
+    transform: none;
+    position: static;
+  }
+
+  .title {
+    font-size: 32px !important;
+  }
+
+  .back-button {
+    font-size: 20px;
+    margin-right: 12px ;
+  }
+}
