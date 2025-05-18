@@ -3,106 +3,106 @@
 @include mat.core();
 
 :host {
-  display: block;
-  min-height: 100vh;
-  background: url('/pictures/bg-homepage.png') no-repeat center center fixed;
-  background-size: cover;
-  position: relative;
+    display: block;
+    min-height: 100vh;
+    background: url("/assets/pictures/bg-homepage.png") no-repeat center center;
+    background-size: cover;
+    position: relative;
 }
 
 :host::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.5); 
-  z-index: 1;
-  pointer-events: none;
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    pointer-events: none;
 }
 
 .home-component {
-  position: relative;
-  z-index: 2;
-  height: 100%;
-  width: 100%;
-  background-color: transparent;
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
 }
 
 .description {
-  position: relative;
-  width: 623px;
-  left: 460px;
-  top: 175px;
+    position: relative;
+    width: 623px;
+    left: 460px;
+    top: 175px;
 
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 45px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 45px;
 
-  letter-spacing: 0.5px;
+    letter-spacing: 0.5px;
 
-  color: #FFFFFF;
+    color: #FFFFFF;
 }
 
 .hikes-button {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
-  gap: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
 
-  position: absolute;
-  width: 200px;
-  height: 75px;
-  left: 460px;
-  top: 500px;
+    position: absolute;
+    width: 200px;
+    height: 75px;
+    left: 460px;
+    top: 500px;
 
-  background: #B79D65;
-  border-radius: 100px;
+    background: #B79D65;
+    border-radius: 100px;
 
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
 
-  text-align: center;
-  letter-spacing: 0.1px;
+    text-align: center;
+    letter-spacing: 0.1px;
 
-  color: #FFFFFF;
+    color: #FFFFFF;
 }
 
 .about-us-title {
-  position: absolute;
-  height: 45px;
-  left: 460px;
-  top: 575px;
+    position: absolute;
+    height: 45px;
+    left: 460px;
+    top: 575px;
 
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 45px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 45px;
 
-  letter-spacing: 0.5px;
+    letter-spacing: 0.5px;
 
-  color: #FFFFFF;
+    color: #FFFFFF;
 }
 
 .about-us-description {
-  position: absolute;
-  width: 1194px;
-  left: 460px;
-  top: 650px;
+    position: absolute;
+    width: 1194px;
+    left: 460px;
+    top: 650px;
 
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 25px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
 
-  letter-spacing: 0.5px;
+    letter-spacing: 0.5px;
 
-  color: #FFFFFF;
+    color: #FFFFFF;
 }
