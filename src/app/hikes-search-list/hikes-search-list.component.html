@@ -1,66 +1,70 @@
 <div class="page-background-color">
-
-    <app-page-title [title]="'Nos Balades'" [showBackButton]="true" [titleColor]="'black'"></app-page-title>
+    <app-page-title [title]="'Nos Balades'" [showBackButton]="true" [titleColor]="'black'">
+    </app-page-title>
 
     <section class="filters">
+
         <div class="dropdown">
-            <button class="dropdown-toggle">Durée</button>
-            <ul class="dropdown-menu">
-                <li>15 minutes</li>
-                <li>30 minutes</li>
-                <li>45 minutes</li>
-                <li>1 heure</li>
-                <li>1h30</li>
-                <li>2 heures et plus…</li>
+            <button class="dropdown-toggle" (click)="toggleDropdown('duration')">Durée</button>
+            <ul class="dropdown-menu" *ngIf="openDropdown === 'duration'">
+                <li (click)="selectedDuration = '60'; filterHikes()">1 heure</li>
+                <li (click)="selectedDuration = '90'; filterHikes()">1h30</li>
+                <li (click)="selectedDuration = '120'; filterHikes()">2 heures</li>
+                <li (click)="selectedDuration = '150'; filterHikes()">2h30</li>
+                <li (click)="selectedDuration = '180'; filterHikes()">3 heures</li>
+                <li (click)="selectedDuration = '300'; filterHikes()">5 heures</li>
             </ul>
         </div>
-        <div class="dropdown"><button class="dropdown-toggle">Cantons</button>
-            <ul class="dropdown-menu">
-                <li>15 minutes</li>
-                <li>30 minutes</li>
-                <li>45 minutes</li>
-                <li>1 heure</li>
-                <li>1h30</li>
-                <li>2 heures et plus…</li>
+
+
+        <div class="dropdown">
+            <button class="dropdown-toggle" (click)="toggleDropdown('canton')">Cantons</button>
+            <ul class="dropdown-menu" *ngIf="openDropdown === 'canton'">
+                <li (click)="selectedCanton = 'Valais'; filterHikes()">Valais</li>
+                <li (click)="selectedCanton = 'Neuchâtel'; filterHikes()">Neuchâtel</li>
+                <li (click)="selectedCanton = 'Berne'; filterHikes()">Berne</li>
             </ul>
         </div>
-        <div class="dropdown"><button class="dropdown-toggle">Ville</button>
-            <ul class="dropdown-menu">
-                <li>15 minutes</li>
-                <li>30 minutes</li>
-                <li>45 minutes</li>
-                <li>1 heure</li>
-                <li>1h30</li>
-                <li>2 heures et plus…</li>
+
+        <div class="dropdown">
+            <button class="dropdown-toggle" (click)="toggleDropdown('difficulty')">Difficulté</button>
+            <ul class="dropdown-menu" *ngIf="openDropdown === 'difficulty'">
+                <li (click)="selectedDifficulty = 'facile'; filterHikes()">Facile</li>
+                <li (click)="selectedDifficulty = 'moyen'; filterHikes()">Moyenne</li>
+                <li (click)="selectedDifficulty = 'difficile'; filterHikes()">Difficile</li>
             </ul>
         </div>
-        <div class="dropdown"><button class="dropdown-toggle">Rayon</button>
-            <ul class="dropdown-menu">
-                <li>15 minutes</li>
-                <li>30 minutes</li>
-                <li>45 minutes</li>
-                <li>1 heure</li>
-                <li>1h30</li>
-                <li>2 heures et plus…</li>
-            </ul>
-        </div>
-        <div class="dropdown"><button class="dropdown-toggle">Difficulté</button>
-            <ul class="dropdown-menu">
-                <li>15 minutes</li>
-                <li>30 minutes</li>
-                <li>45 minutes</li>
-                <li>1 heure</li>
-                <li>1h30</li>
-                <li>2 heures et plus…</li>
-            </ul>
-        </div>
+
+        <button class="dropdown-toggle reset-button" (click)="resetFilters()">Réinitialiser</button>
+    </section>
+
+    <section class="active-filters" *ngIf="selectedDuration || selectedCanton || selectedCity || selectedDifficulty">
+        <p><strong>Filtres appliqués :</strong></p>
+        <ul class="active-filters-list">
+            <li *ngIf="selectedDuration">
+                Durée : {{ selectedDuration }} min
+                <span class="remove-filter" (click)="selectedDuration = null; filterHikes()">✕</span>
+            </li>
+            <li *ngIf="selectedCanton">
+                Canton : {{ selectedCanton }}
+                <span class="remove-filter" (click)="selectedCanton = null; filterHikes()">✕</span>
+            </li>
+            <li *ngIf="selectedCity">
+                Ville : {{ selectedCity }}
+                <span class="remove-filter" (click)="selectedCity = null; filterHikes()">✕</span>
+            </li>
+            <li *ngIf="selectedDifficulty">
+                Difficulté : {{ selectedDifficulty }}
+                <span class="remove-filter" (click)="selectedDifficulty = null; filterHikes()">✕</span>
+            </li>
+        </ul>
     </section>
 
     <section>
         <div>
             <h2 class="page-title">Liste des balades</h2>
             <ul class="hikes-list">
-                <li class="hike-item" *ngFor="let hike of hikes">
+                <li class="hike-item" *ngFor="let hike of filteredHikes">
                     <div class="hike-card">
                         <h3 class="hikes-name">{{ hike.title }}</h3>
                         <img [src]="hike.imagePath" alt="Image de la balade" class="hike-image" />
